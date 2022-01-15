@@ -1,9 +1,4 @@
-//! Provides an abstraction of the HID communication with the Teensy hardware.
+//! Provides traits for abstracting hardware to the simulator.
 //! 
-//! This module handles everything from opening the device, to sending and receiving packets.
+//! Individual devices should be implemented as separate modules.
 
-
-/// Teensy vendor ID in "raw HID" mode
-const VENDOR_ID: u16 = 0x16C0;
-/// Teensy product ID in "raw HID" mode
-const PRODUCT_ID: u16 = 0x486;

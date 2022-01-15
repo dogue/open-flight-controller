@@ -8,3 +8,7 @@ edition = "2021"
 [target.'cfg(windows)'.dependencies]
 msfs = "0.1.0"
 hidapi = "1.3.2"
+
+[features]
+default = ["teensy_hid"]
+teensy_hid = []
