@@ -18,8 +18,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Generate docs
       run: |
-        Invoke-WebRequest -Uri "https://github.com/dogue/open-flight-controller/blob/msfs_sdk/msfs_sdk.msi?raw=true" -Outfile "msfs_sdk.msi"
-        ./msfs_sdk.msi /quiet /qn /i /norestart
+        Invoke-WebRequest -Uri "https://github.com/dogue/open-flight-controller/archive/refs/heads/msfs_sdk.zip" -Outfile "msfs_sdk.zip"
+        Expand-Archive -Path msfs_sdk.zip -DestinationPath "C:/MSFS SDK"
         ls C:/
         cargo doc --no-deps
         cd target/doc
