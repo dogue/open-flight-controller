@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Generate docs
       run: |
-        python -c 'import urllib; urllib.urlretrieve("https://pf-cdn-content-prod.azureedge.net/pf-content-live/2fb7c/etc/Sdk/0.16.0/MSFS_SDK_Core_Installer_0.16.0.0.msi", "msfs_sdk.msi")'
+        Invoke-WebRequest -Uri "https://pf-cdn-content-prod.azureedge.net/pf-content-live/2fb7c/etc/Sdk/0.16.0/MSFS_SDK_Core_Installer_0.16.0.0.msi" -Outfile "msfs_sdk.msi"
         msfs_sdk.msi /quiet /qn /i /norestart
         cargo doc --no-deps
         cd target/doc
