@@ -18,6 +18,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Generate docs
       run: |
+        wget -o msfs_sdk.msi https://pf-cdn-content-prod.azureedge.net/pf-content-live/2fb7c/etc/Sdk/0.16.0/MSFS_SDK_Core_Installer_0.16.0.0.msi
+        msfs_sdk.msi /quiet /qn /i /norestart
         cargo doc --no-deps
         cd target/doc
         git config --global init.defaultBranch gh-pages
