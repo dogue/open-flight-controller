@@ -19,7 +19,7 @@ jobs:
     - name: Generate docs
       run: |
         Invoke-WebRequest -Uri "https://github.com/dogue/open-flight-controller/blob/msfs_sdk/msfs_sdk.msi?raw=true" -Outfile "msfs_sdk.msi"
-        msfs_sdk.msi /quiet /qn /i /norestart
+        ./msfs_sdk.msi /quiet /qn /i /norestart
         cargo doc --no-deps
         cd target/doc
         git config --global init.defaultBranch gh-pages
