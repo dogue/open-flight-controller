@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["autopilot","Provides a convenient API for getting and setting various values and modes of the autopilot."],["controller","Provides traits for abstracting hardware to the simulator."],["teensy","Provides an interface to reading/writing data to a Teensy board over raw HID."]]});
